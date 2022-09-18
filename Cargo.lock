@@ -543,6 +543,7 @@ dependencies = [
  "anyhow",
  "csv-async",
  "futures",
+ "log",
  "rust_decimal",
  "structopt",
  "thiserror",

@@ -9,7 +9,7 @@ pub(crate) struct Reader {
 
 impl Reader {
     pub(crate) async fn new(file_path: PathBuf) -> Result<Reader, CustomError> {
-        let file = File::open(file_path).await.unwrap();
+        let file = File::open(file_path).await?;
         let reader = csv_async::AsyncReaderBuilder::new()
             .trim(csv_async::Trim::All)
             .create_reader(file);
